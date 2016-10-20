@@ -1,1 +1,9 @@
-# python-tutorial
+# Overview
+
+This is tutorial for python 2.7
+
+# Rrerequisites
+
+You need to have anaconda installed on your computer. If not, install using this [link](https://www.continuum.io/downloads)
+
+# Guide
