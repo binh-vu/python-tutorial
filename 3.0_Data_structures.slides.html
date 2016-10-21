@@ -365,7 +365,9 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong><code>del</code></strong> statement can be used to remove an item from a list given its index</p>
+<ul>
+<li><strong><code>del</code></strong> statement can be used to remove an item from a list given its index</li>
+</ul>
 
 </div>
 </div>
@@ -446,6 +448,127 @@ a.anchor-link {
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[4, 5, 6, 7, 8, 9]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><strong><code>list()</code></strong>: convert a sequence to a list</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[76]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="nb">list</span><span class="p">(</span><span class="s1">&#39;i can eat glass&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&apos;i&apos;, &apos; &apos;, &apos;c&apos;, &apos;a&apos;, &apos;n&apos;, &apos; &apos;, &apos;e&apos;, &apos;a&apos;, &apos;t&apos;, &apos; &apos;, &apos;g&apos;, &apos;l&apos;, &apos;a&apos;, &apos;s&apos;, &apos;s&apos;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Sort-a-list">Sort a list<a class="anchor-link" href="#Sort-a-list">&#182;</a></h3><ul>
+<li><strong><code>sorted</code></strong><code>(list, [cmp=None[, key=None[, reverse]]])</code>: return a new sorted list</li>
+<li><strong><code>list.sort</code></strong><code>([cmp=None[, key=None[, reverse]]])</code>: sort the current list (not creating new list)</li>
+</ul>
+<p>where:</p>
+<ul>
+<li><strong>cmp</strong>: custom comparison function should return a negative, zero or positive number depending on whether the first argument is considered smaller than, equal to, or larger than the second argument</li>
+<li><strong>key</strong>: function extracting a comparison key from each list element.</li>
+<li><strong>reverse</strong>: if True, ascending sort otherwise, descending sort.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[73]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="nb">sorted</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="k">print</span> <span class="n">a</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">reverse</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">a</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[3, 2, 1]
+None
+[3, 2, 1]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[74]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="nb">sorted</span><span class="p">([</span>
+    <span class="p">[</span><span class="s1">&#39;peter&#39;</span><span class="p">,</span> <span class="mi">23</span><span class="p">],</span>
+    <span class="p">[</span><span class="s1">&#39;john&#39;</span><span class="p">,</span> <span class="mi">30</span><span class="p">],</span>
+    <span class="p">[</span><span class="s1">&#39;tom&#39;</span><span class="p">,</span> <span class="mi">18</span><span class="p">]</span>
+<span class="p">],</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[[&apos;tom&apos;, 18], [&apos;peter&apos;, 23], [&apos;john&apos;, 30]]
 </pre>
 </div>
 </div>
@@ -591,6 +714,7 @@ a.anchor-link {
 <h1 id="Sets">Sets<a class="anchor-link" href="#Sets">&#182;</a></h1><ul>
 <li>A set is an unordered collection with no duplicate elements</li>
 <li>Curly brackets can use to create set</li>
+<li><strong><code>set()</code></strong>: convert a sequence to a set</li>
 </ul>
 
 </div>
@@ -690,6 +814,46 @@ a.anchor-link {
 </div>
 </div>
 
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>you can loop over the set</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[75]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">set</span><span class="p">(</span><span class="s1">&#39;i can eat glass&#39;</span><span class="p">):</span>
+    <span class="k">print</span> <span class="n">c</span><span class="p">,</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>a   c e g i l n s t
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -697,7 +861,8 @@ a.anchor-link {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Dictionaries">Dictionaries<a class="anchor-link" href="#Dictionaries">&#182;</a></h1><ul>
-<li>it's mapping type</li>
+<li>it's mapping type: key -&gt; value</li>
+<li>key can be any immutable type: usually string or number</li>
 </ul>
 
 </div>
@@ -752,6 +917,117 @@ a.anchor-link {
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>4098
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><strong><code>dict.keys()</code></strong>: return set of keys</li>
+<li><strong><code>dict.values()</code></strong>: return set of values</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[79]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="n">tel</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+<span class="k">print</span> <span class="n">tel</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&apos;sape&apos;, &apos;jack&apos;, &apos;guido&apos;]
+[4139, 4098, 4127]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Loop-over-a-dictionary">Loop over a dictionary<a class="anchor-link" href="#Loop-over-a-dictionary">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[80]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">tel</span><span class="p">:</span> <span class="c1"># = tel.keys()</span>
+    <span class="k">print</span> <span class="n">name</span><span class="p">,</span> <span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="n">tel</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>sape : 4139
+jack : 4098
+guido : 4127
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[81]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">for</span> <span class="n">telno</span> <span class="ow">in</span> <span class="n">tel</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+    <span class="k">print</span> <span class="n">telno</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>4139
+4098
+4127
 </pre>
 </div>
 </div>
@@ -1009,19 +1285,6 @@ a.anchor-link {
 </div>
 </div>
 
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span> 
-</pre></div>
-
-</div>
 </div>
 </div>
 
